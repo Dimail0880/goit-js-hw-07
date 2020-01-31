@@ -23,7 +23,6 @@ function createGallery(arr, list) {
         img.classList.add("task3image");
         li.append(img);
         list.append(li);
-        list.insertAdjacentHTML("afterbegin", '<ul id="gallery"></ul>');
     }
 }
 createGallery(images, gallery);
