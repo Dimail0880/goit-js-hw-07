@@ -14,15 +14,14 @@ const images = [{
 
 let gallery = document.querySelector("#gallery");
 
-function createGallery(arr, list) {
-    for (let obj of arr) {
-        let li = document.createElement("li");
-        let img = document.createElement("img");
-        img.src = obj.url;
-        img.alt = obj.alt;
-        img.classList.add("task3image");
-        li.append(img);
-        list.append(li);
-    }
+function createGallery(obj) {
+    let li = document.createElement("li");
+    let img = document.createElement("img");
+    img.src = obj.url;
+    img.alt = obj.alt;
+    img.classList.add("task3image");
+    li.append(img);
+    return li
 }
-createGallery(images, gallery);
+let imageList = images.map(el => createGallery(el))
+gallery.append(...imageList)
