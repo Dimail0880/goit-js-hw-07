@@ -2,5 +2,5 @@ let inputName = document.querySelector('#name-input')
 let outputName = document.querySelector('#name-output')
 
 inputName.addEventListener('input', () => {
-    inputName.value === '' ? outputName.textContent = 'незнакомец' : outputName.textContent = inputName.value
+    outputName.textContent = inputName.value === '' ? 'незнакомец' : inputName.value
 })
